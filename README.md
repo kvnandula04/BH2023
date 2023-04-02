@@ -12,6 +12,7 @@ Turing Complete.
 ## FWKB-I (Our instruction set)
 | Instruction | 4-bit Binary |
 |---|---|
+| hlt | 0000 |
 | lpm | 0001 |
 | add |  0010 |
 | addi | 0011  |
@@ -30,3 +31,4 @@ Turing Complete.
 
 **Abstract** is the initial workspace for creating the program (written in Python) <br><br>
 **Tape** is the binary code for the physical tape which represents the program and the data
+**Nibbles** is the binary code from tape broken down into nibbles
