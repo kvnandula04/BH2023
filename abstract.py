@@ -1,21 +1,15 @@
-tape = ['LOAD', 'value_reg', 'abs_offset_reg', 'SHFT', 'DISP', 'O', 'D', 'D', 'Z', 'S', '<eos>']
+tape = ['LOAD', 'value_reg', 'abs_offset_reg',
+        'SHFT', 'DISP', 'O', 'D', 'D', 'Z', 'S', '<eos>']
 
 pc = 0
 
-
-
 value_reg = 0
 abs_offset_reg = 5
-
 ceasar = 12
 
 
 def reset():
     exit()
-    while pc != 0:
-        pc -= 1
-    value_reg = 0
-    offset_reg = 3
 
 
 def translate(input):  # 7-seg
@@ -28,9 +22,9 @@ def out(input):
 
 while True:
     if tape[pc] == 'LOAD':
-        pc += 1 # where2store
-        local_where_to_store = tape[pc] # name value_reg
-        pc += 1 # how far to go
+        pc += 1  # where2store
+        local_where_to_store = tape[pc]  # name value_reg
+        pc += 1  # how far to go
         local_offset_reg = tape[pc] - pc
 
         # move to how far to go
@@ -38,18 +32,18 @@ while True:
         while temp_reg != local_offset_reg:
             pc += 1  # rotate motors one symbol
             temp_reg += 1
-        
+
         # store value in where2store
         local_where_to_store = tape[pc]
         value_reg = local_where_to_store
         if value_reg == '<eos>':
-            reset() # end of program
-        
+            reset()  # end of program
+
         # move back to how far to go
         while temp_reg != 0:
             pc -= 1
             temp_reg -= 1
-        
+
         if value_reg == 32:
             out('_')
             offset_reg
