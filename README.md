@@ -55,7 +55,7 @@ Below is a picture specifically looking at 1 cell of the tape and how it's broke
 ![Cells on tape](res/Cells.jpeg "Cells on tape")
 
 ## Files
-1. **abstract.py** is the initial workspace for creating the program (Python) <br><br>
-2. **main.asm** is the assembly code for testing out the program (AVR) <br><br>
-3. **tape.bin** is the binary code for the physical tape which represents the program and the data <br><br>
-4. **nibbles.bin** is the binary code from tape broken down into nibbles
+1. **`abstract.py`** is the initial workspace for creating the program (Python) <br><br>
+2. **`main.asm`** is the assembly code for testing out the program (AVR) <br><br>
+3. **`tape.bin`** is the binary code for the physical tape which represents the program and the data <br><br>
+4. **`nibbles.bin`** is the binary code from tape broken down into nibbles
