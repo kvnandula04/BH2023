@@ -76,7 +76,7 @@ The following is a table of our instruction set, and the binary representation o
 
 ## Files
 
-1. **abstract.py** The initial workspace for conceptualising the program (Python) <br><br>
-2. **main.asm** The assembly code for simulating out the program (AVR) <br><br>
-3. **tape.bin** is the binary code for the physical tape which represents the program and the data <br><br>
-4. **nibbles.bin** is the binary code from tape broken down into nibbles
+1. **`abstract.py`** The initial workspace for conceptualising the program (Python) <br><br>
+2. **`main.asm`** The assembly code for simulating out the program (AVR) <br><br>
+3. **`tape.bin`** is the binary code for the physical tape which represents the program and the data <br><br>
+4. **`nibbles.bin`** is the binary code from tape broken down into nibbles
