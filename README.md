@@ -42,6 +42,18 @@ The following is a general purpose demonstration of a Caeser shift program: <br>
  - Input data = "VSZZC" <br>
  - Decrypted output on 7 segment display = "HELLO" (printed one char at a time)
 
+## Tape Structure
+The high level layout of the tape is as follows. It contains an initial section of the tape which is the program followed by a section for the data. <br><br>
+
+![Layout](res/Tape%20layout.jpeg "Tape layout")
+
+The information on the tape itself is broken down into 1 byte per cell. For 1 instruction using our instruction set, it takes 2 bytes(2 cells). The first 4 bits represent the opcode(instruction) and there are 2 operands which are 6 bits each; together, the opcode and operands make the 2 bytes. <br><br>
+
+![Tape structure](res/Tape%20structure.jpeg "Tape structure")
+
+Below is a picture specifically looking at 1 cell of the tape and how it's broken down. <br><br>
+![Cells on tape](res/Cells.jpeg "Cells on tape")
+
 ## Files
 1. **abstract.py** is the initial workspace for creating the program (Python) <br><br>
 2. **main.asm** is the assembly code for testing out the program (AVR) <br><br>
