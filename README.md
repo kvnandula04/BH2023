@@ -1,10 +1,8 @@
-# BH2023
-
-Bath Hack 2023
+# Bath Hack 2023
 
 # **RISC-iest Tape Computer**
 
-A **Turing Complete** Tape & ATMega general purpose. The tape is a physical strip of paper with binary nibbles written on it using our own (extra-reduced) instruction set, detailed at bottom. The ATMega executes interpeted opcodes & operands.
+A **Turing Complete** Tape & ATMega general purpose computer. The tape is a physical strip of paper with binary nibbles written on it using our own (extra-reduced) instruction set, detailed at bottom. The ATMega executes interpeted opcodes & operands using its registers and the motors to move the tape.
 
 ## _Key Points:_
 
@@ -17,6 +15,8 @@ A **Turing Complete** Tape & ATMega general purpose. The tape is a physical stri
 # **High-Level Overview**
 
 <p align="center"><img src="res/RISC%20Diagram.png" width="80%"></p>
+
+The RISC-iest Tape Computer uses a tape where LDRs capture blocked light as the stepper motors rolls the tape backwards and forwards through the head.
 
 <br>
 
@@ -66,6 +66,20 @@ Below is a picture specifically looking at 1 cell of the tape and how it's broke
 
 <br>
 
+# **Innovations**
+ - **4x Denser** - Initially we planned to fit 1 bit per cell, using Lego, we found a reliable way to densely pack each cell with 8 bits thus allowing more information to be stored in smaller tape length.
+ - **General Purpose structuring** - Setting the opcode to 4 bits and each operand to 6 bits allowed us to have the full instruction set with upto 16 instructions as well as ample range for the operands. This was a key innovation as it allowed us to have a more general purpose instruction set.
+ - **Reliable Bit-marking** - Initially we planned to punch holes in the tape to allow light to pass through to signify a bit. Although, we couldn't find a reliable method to do this. Instead of letting the light pass through, we decided to block the light with a black marker to signify a bit.
+  
+<br>
+
+# **Limitations**
+ - The **tape is read only** and cannot be written to. This means that the program cannot be changed once it has been loaded onto the tape. We are limited by the number of available registers on the ATMega to store and manipulate data.
+ - The program & data have to be **manual**ly translated into binary and drawn onto the tape, which is a time consuming process and suceptible to human-error.
+ <!-- - Currently, there is potential for expanding the instruction set with 2 more instructions. In the future, if we wanted to implement more instructions, we would have to completely restructure the bit allocation for the opcodes and operands. -->
+
+<br>
+
 # **FWKB-I (Instruction set)**
 
 The following is a table of our instruction set, and the binary representation of each instruction. It's composed of 14 instructions and is Turing complete. <br>
@@ -91,7 +105,8 @@ The following is a table of our instruction set, and the binary representation o
 
 # **Files**
 
-1. **`abstract.py`** The initial workspace for conceptualising the program (Python) <br><br>
-2. **`main.asm`** The assembly code for simulating out the program (AVR) <br><br>
-3. **`tape.bin`** is the binary code for the physical tape which represents the program and the data <br><br>
-4. **`nibbles.bin`** is the binary code from tape broken down into nibbles
+1. **`nibbles.bin`** is the binary code from tape broken down into nibbles (Binary) <br><br>
+2. **`tape.bin`** is the binary code for the physical tape which represents the program and the data (Binary) <br><br>
+3. **`main.asm`** The assembly code for simulating out the program (AVR) <br><br>
+4. **`abstract.py`** The initial workspace for conceptualising the program (Python) <br><br>
+
