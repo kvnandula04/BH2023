@@ -10,7 +10,13 @@ A **Turing Complete** Tape & ATMega general purpose. The tape is a physical stri
 
 -   System memory is **all on Tape** - program & data stored as sets of nibbles.
 -   Only used ATMega as Head, using only processing power & registers. <br>(**no on-board memory**)
--   Implemented fully in **_AVR assembly_**, as programming the ATMega in C would use its on-board memory.
+-   Implemented **fully in _AVR_ assembly**, as programming the ATMega in C would use its on-board memory.
+
+<br>
+
+# **High-Level Overview**
+
+![Diagram](res/RISC%20Diagram.png "Diagram")
 
 <br>
 
@@ -50,10 +56,14 @@ The information on the tape itself is broken down into 1 byte per cell. For 1 in
 
 ![Tape structure](res/Tape%20structure.jpeg "Tape structure")
 
+<e><img style="align-self: center" src="res/RISC%20example.png" width="50%" height="50%"></e>
+<br>
 Below is a picture specifically looking at 1 cell of the tape and how it's broken down. <br><br>
 ![Cells on tape](res/Cells.jpeg "Cells on tape")
 
-## FWKB-I (Instruction set)
+<br>
+
+# **FWKB-I (Instruction set)**
 
 The following is a table of our instruction set, and the binary representation of each instruction. It's composed of 14 instructions and is Turing complete. <br>
 
@@ -74,7 +84,9 @@ The following is a table of our instruction set, and the binary representation o
 | LOADK       | 1100         | Load constant k into the specified register                                           |
 | DISP        | 1101         | Display the value of the specified register on the 7-segment display                  |
 
-## Files
+<br>
+
+# **Files**
 
 1. **`abstract.py`** The initial workspace for conceptualising the program (Python) <br><br>
 2. **`main.asm`** The assembly code for simulating out the program (AVR) <br><br>
