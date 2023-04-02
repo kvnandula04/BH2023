@@ -16,7 +16,7 @@ A **Turing Complete** Tape & ATMega general purpose. The tape is a physical stri
 
 # **High-Level Overview**
 
-![Diagram](res/RISC%20Diagram.png "Diagram")
+<p align="center"><img src="res/RISC%20Diagram.png" width="80%"></p>
 
 <br>
 
@@ -50,16 +50,17 @@ A caesar cipher implemented using general purpose (extra-reduced) instruction se
 
 The high level layout of the tape is as follows. It contains an initial section of the tape which is the program followed by a section for the data. <br><br>
 
-![Layout](res/Tape%20layout.jpeg "Tape layout")
+<p align="center"><img src="res/Tape%20layout.jpeg" width="80%"></p>
 
 The information on the tape itself is broken down into 1 byte per cell. For 1 instruction using our instruction set, it takes 2 bytes(2 cells). The first 4 bits represent the opcode(instruction) and there are 2 operands which are 6 bits each; together, the opcode and operands make the 2 bytes. <br><br>
 
-![Tape structure](res/Tape%20structure.jpeg "Tape structure")
+<p align="center"><img src="res/Tape%20structure.jpeg" width="80%"></p>
 
-<e><img style="align-self: center" src="res/RISC%20example.png" width="50%" height="50%"></e>
+<p align="center"><img src="res/RISC%20example.png" width="60%"></p>
+
 <br>
 Below is a picture specifically looking at 1 cell of the tape and how it's broken down. <br><br>
-![Cells on tape](res/Cells.jpeg "Cells on tape")
+<p align="center"><img src="res/Cells.jpeg" width="60%"></p>
 
 <br>
 
