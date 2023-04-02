@@ -54,9 +54,11 @@ The high level layout of the tape is as follows. It contains an initial section 
 
 The information on the tape itself is broken down into 1 byte per cell. For 1 instruction using our instruction set, it takes 2 bytes(2 cells). The first 4 bits represent the opcode(instruction) and there are 2 operands which are 6 bits each; together, the opcode and operands make the 2 bytes. <br><br>
 
-<p align="center"><img src="res/Tape%20structure.jpeg" width="80%"></p>
 
-<p align="center"><img src="res/RISC%20example.png" width="60%"></p>
+ <img src="res/Tape%20structure.jpeg" width="90%"> | <img src="res/RISC%20example.png" width="100%">
+:-------------------------:|:-------------------------:
+full instruction breakdown            |  single nibble example
+
 
 <br>
 Below is a picture specifically looking at 1 cell of the tape and how it's broken down. <br><br>
